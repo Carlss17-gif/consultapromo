@@ -39,7 +39,6 @@ async function consultarCliente() {
 
         mensaje.textContent = "Consulta exitosa";
         nombreEl.textContent = "Cliente: " + data.nombre;
-        idEl.textContent = "ID: " + data.id_invitado_promocion;
         prom.textContent = "Promoción: " + data.promocion;
     } catch (err) {
         console.error("Error JS:", err);
