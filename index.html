@@ -2,99 +2,80 @@
 <html lang="es">
 
 <head>
+    <meta charset="UTF-8">
+    <title>Consulta de Cupón</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="Consulta1.js" defer></script>
 
-<meta charset="UTF-8">
-<title>Consulta de Cupón</title>
+    <style>
+        body {
+            background: url("Fondo.png") no-repeat center center/cover;
+            color: rgb(255, 255, 255);
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        .card {
+            background: #1c1c1c;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
 
-<style>
+        .cupon {
+            font-size: 40px;
+            margin: 15px;
+        }
 
-body{
-background: url("Fondo.png") no-repeat center center/cover;
-color:rgb(255, 255, 255);
-font-family:Arial;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-margin:0;
-}
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #ffcc00;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 6px;
+        }
 
-.card{
-background:#1c1c1c;
-padding:30px;
-border-radius:10px;
-text-align:center;
-width:300px;
-}
+        button:hover {
+            background: #e6b800;
+        }
 
-input{
-width:100%;
-padding:12px;
-margin:8px 0;
-border:none;
-border-radius:8px;
-background:#2a2a2a;
-color:white;
-}
-
-.cupon{
-font-size:40px;
-margin:15px;
-}
-
-button{
-padding:10px 15px;
-border:none;
-background:#ffcc00;
-font-weight:bold;
-cursor:pointer;
-margin:5px;
-border-radius:6px;
-}
-
-button:hover{
-background:#e6b800;
-}
-
-</style>
-
+        #mensaje {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #ccc;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="card">
+        <h2>🍔 Promoción Carls Jr</h2>
 
-<div class="card">
+        <div id="mensaje">Cargando cliente...</div>
 
-<h2>🍔 Promoción Carls Jr</h2>
+        <div id="nombre"></div>
+        <div id="cliente_id"></div>
+        <div id="Promocion"></div>
 
-<div id="nombre">
-Cargando cliente...
-</div>
+        <div class="cupon">⭐</div>
 
-<div id="cliente_id"></div>
-<div id="Promocion"></div>
+        <p style="font-size:13px;color:#ccc;">
+            Solo el encargado puede validar esta promoción
+        </p>
 
-<div class="cupon">
-⭐
-</div>
-
-<p style="font-size:13px;color:#ccc;">
-Solo el encargado puede validar esta promoción
-</p>
-
-<!-- 🔹 BOTÓN CONSULTA -->
-<button onclick="consultarCliente()">
-Consulta
-</button>
-
-<!-- 🔹 BOTÓN VALIDAR -->
-<button onclick="hacerValidaPromocion()">
-Hacer válida promoción
-</button>
-
-</div>
-
+        <!-- Botones -->
+        <button id="btn-consulta">Consulta</button>
+        <button id="btn-validar">Hacer validación</button>
+    </div>
+</body>
+</html>
 <script src="consulta1.js"></script>
 
 </body>
