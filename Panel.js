@@ -46,7 +46,6 @@ cargarCliente();
 async function canjear() {
 
   const transaccion = document.getElementById("transaccion").value;
-  const Cantidadt = document.getElementById("Cantidadt").value;
   const fecha = document.getElementById("fecha").value;
   const hora = document.getElementById("hora").value;
 
@@ -76,7 +75,6 @@ async function canjear() {
         id_invitado_promocion: data.id_invitado_promocion,
         invitado: data.nombre,
         promocion: data.promocion,
-        Cantidad: Cantidadt,
         nombre_gerente: nombreger, // <-- usamos solo el nombre del gerente
         numero_transaccion: transaccion,
         fecha: fecha,
