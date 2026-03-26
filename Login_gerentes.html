@@ -8,10 +8,9 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <style>
-
 body{
 background: url("Fondo.png") no-repeat center center/cover;
-color:rgb(255, 255, 255);
+color:white;
 font-family:Arial;
 display:flex;
 justify-content:center;
@@ -20,41 +19,64 @@ height:100vh;
 margin:0;
 }
 
-.card{
-background:#1c1c1c;
-padding:30px;
-border-radius:10px;
+/* CONTENEDOR MÁS BONITO */
+.login-box{
+background: rgba(0, 0, 0, 0.85); /* fondo más elegante */
+padding:40px;
+border-radius:15px;
+width:320px;
 text-align:center;
-width:300px;
+box-shadow:0 0 20px rgba(255, 255, 0, 0.3); /* brillo amarillo */
+backdrop-filter: blur(5px); /* efecto vidrio */
+}
+
+/* TÍTULO EN AMARILLO */
+h2{
+margin-bottom:20px;
+color:yellow;
+text-shadow:0 0 5px rgba(255,255,0,0.7);
+}
+
+label{
+color:yellow;
+display:block;
+text-align:left;
+margin-top:10px;
+margin-bottom:5px;
 }
 
 input{
 width:100%;
-padding:12px;
-margin:8px 0;
+padding:10px;
 border:none;
-border-radius:8px;
-background:#2a2a2a;
+border-radius:5px;
+background:#222;
 color:white;
+margin-bottom:10px;
+outline:none;
 }
 
-.cupon{
-font-size:40px;
-margin:15px;
+input:focus{
+box-shadow:0 0 5px yellow;
 }
 
+/* BOTÓN */
 button{
-padding:10px 15px;
+width:100%;
+padding:12px;
+background:yellow;
 border:none;
-background:#ffcc00;
-font-weight:bold;
+border-radius:5px;
+color:black;
+font-size:16px;
 cursor:pointer;
-margin:5px;
-border-radius:6px;
+margin-top:10px;
+transition:0.3s;
 }
 
 button:hover{
-background:#e6b800;
+background:#e6c200;
+transform:scale(1.05);
 }
 
 </style>
